@@ -1,13 +1,134 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root {
+  --purple: #672280;
+  --light-purple: #a626d3;
+  --orange: #eca81c;
+  --dark-orange: #ff8231;
+  --white: #ffffff;
+  --black: #000;
+  --dark: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;700;800&display=swap");
+
+.App {
+  text-align: center;
+}
+
+.header {
+  background: linear-gradient(
+    90deg,
+    var(--purple) 1.18%,
+    var(--light-purple) 100%
+  );
+  padding: 20px;
+  font-family: "Karla", sans-serif;
+  color: var(--white);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  padding: 36px;
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.btn-orange {
+  background: linear-gradient(
+    30deg,
+    var(--orange) 1.18%,
+    var(--dark-orange) 100%
+  );
+  color: var(--white);
+}
+
+.btn-orange:hover {
+  background: linear-gradient(
+    30deg,
+    var(--orange) 4.18%,
+    var(--dark-orange) 100%
+  );
+}
+
+.input-group input {
+  border: 1px solid #d5d4d8;
+  border-radius: 5px;
+  flex-grow: 1;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.meme {
+  position: relative;
+  margin-top: 30px;
+}
+
+.meme-image {
+  width: 100%;
+}
+
+.meme-text {
+  position: absolute;
+  margin: 15px 0;
+  width: 100%;
+  text-align: center;
+  font-family: impact, sans-serif;
+  font-size: 3em;
+  padding: 0 5px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.meme-text.bottom {
+  bottom: 0;
+}
+
+.meme-text.top {
+  top: 0;
 }
